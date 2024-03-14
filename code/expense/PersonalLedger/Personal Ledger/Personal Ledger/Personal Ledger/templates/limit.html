@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<div class="container">
+    <h2>Monthly Expense Limit</h2>
+    <p>Current monthly limit: ₹ {{ limit }}</p>
+    <form method="post" action="/limitn">
+        <div class="form-group">
+            <label for="new_limit">Enter new monthly limit:</label>
+            <input type="number" class="form-control" id="new_limit" name="number" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Limit</button>
+    </form>
+</div>
+{% endblock %}
